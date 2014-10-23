@@ -1,0 +1,11 @@
+'use strict';
+var cofy = require('cofy');
+exports.collection =require('./lib/collection');
+exports.fsp =require('./lib/fsp');
+cofy.object(exports.fsp);
+exports.hash =require('./lib/hash');
+cofy.object(exports.hash,true,['sigFile','md5File']);
+exports.image =require('./lib/image');
+cofy.object(exports.image);
+exports.net =require('./lib/net');
+exports.random =require('./lib/random');

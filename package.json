@@ -1,0 +1,42 @@
+{
+  "name": "myutils",
+  "version": "0.0.5",
+  "description": "my utils.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive -R spec --require should --harmony test/ --bail",
+    "test-cov": "node --harmony node_modules/istanbul-harmony/lib/cli.js cover ./node_modules/mocha/bin/_mocha  -- -u exports --require should  --recursive test/ --bail",
+    "test-travis": "node --harmony node_modules/istanbul-harmony/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -u exports --require should  --recursive test/ --bail"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RocksonZeta/myutils.git"
+  },
+  "keywords": [
+    "myutils",
+    "common",
+    "utils",
+    "util",
+    "hash",
+    "net",
+    "fs",
+    "random",
+    "collection",
+    "image"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "co": "^3.1.0",
+    "coveralls": "*",
+    "istanbul-harmony": "*",
+    "mocha": "*",
+    "mocha-lcov-reporter": "*",
+    "should": "*"
+  },
+  "engines": {
+    "node": ">= 0.11.9"
+  },
+  "dependencies": {
+    "cofy": "^2.0.1"
+  }
+}
