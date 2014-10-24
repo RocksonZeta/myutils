@@ -8,27 +8,18 @@ Some useful utils.
 $ npm install myutils --save
 ```
 
+###Example:
+```js
+'use strict';
+require('should');
+var utils = require('myutils');
+
+utils.version.compare("1.0" , "1.0.1").should.equal(-1);
+utils.net.ipToInt('192.168.0.1').should.equal(3232235521);
+```
+
 API:
 invoke convention: `module.$method` should use like this `yield module.$method` in [co](https://github.com/tj/co) or [koa](https://github.com/koajs/koa) envirment.
-
-### collection
-- **group(array,key)** - group `array` by the `key`.`array` should like [{} ,{}].return {key:[]}
-- **groupOne(array,key)** - group `array` by the `key` , each group only has the on record. return {key:{}}
-- **col(array,key,keepNullValue)** - extract one column from array.if `keepNullValue` is true,the return will keep the null value.
-
-###mysql
-- **getSql(table,key,value,keys)** - generate get sql.
-- **postSql(table,object)** - generate get sql.
-- **putSql(table,key,value,keys)** - generate get sql.
-- **delSql(table,key,value,keys)** - generate get sql.
-- **build(sql , params)** - replace `(':k1,:k2 ',{k1:"v1",k2:"v2"})` -> `'v1,v2'`.
-- **ukvs(opt ,[prefix])** - {k1:'v1',k2:'v2'} -> `k1`=v1,`k2`=v2 .
-- **ks(table,key,value,keys)** - keys. ['k1','k2'] -> k1,k2.
-- **cks(['k1','k2'] -> :k1,:k2)** - colon keys. `['k1','k2']` -> `:k1,:k2`.
-- **kvs(ks ,[prefix])** - ['k1','k2'] -> `k1`=:k1,`k2`=:k2 .
-- **inSql(fieldName , array , [isAnd] ,[page])** - eg.`('f' , [1,2,...,1000])` -> `f in (1,2,3...200) or f in(201,...)` .
-- **batch(con,sqls,page,needResult,cb)** - batch execute sqls.
-- **$batch(con,sqls,page,needResult)** - batch execute sqls, used in co,must use `yield mysql.$batch(con,sqls,page,needResult)` .
 
 ###hash
 - **md5(str)** - md5 string in hex.
@@ -63,6 +54,27 @@ implements with use system command
 - **$cp(src, dst)** - copy
 - **$cpf(src, dst)** - force copy,if dst dir not exits ,create it.
 - **$rm(src)** - 
+
+###mysql
+- **getSql(table,key,value,keys)** - generate get sql.
+- **postSql(table,object)** - generate post sql.
+- **putSql(table,key,value,keys)** - generate put sql.
+- **delSql(table,key,value,keys)** - generate delete sql.
+- **build(sql , params)** - replace `(':k1,:k2 ',{k1:"v1",k2:"v2"})` -> `'v1,v2'`.
+- **ukvs(opt ,[prefix])** - {k1:'v1',k2:'v2'} -> `k1`=v1,`k2`=v2 .
+- **ks(table,key,value,keys)** - keys. ['k1','k2'] -> k1,k2.
+- **cks(['k1','k2'] -> :k1,:k2)** - colon keys. `['k1','k2']` -> `:k1,:k2`.
+- **kvs(ks ,[prefix])** - ['k1','k2'] -> `k1`=:k1,`k2`=:k2 .
+- **inSql(fieldName , array , [isAnd] ,[page])** - eg.`('f' , [1,2,...,1000])` -> `f in (1,2,3...200) or f in(201,...)` .
+- **batch(con,sqls,page,needResult,cb)** - batch execute sqls.
+- **$batch(con,sqls,page,needResult)** - batch execute sqls, used in co,must use `yield mysql.$batch(con,sqls,page,needResult)` .
+
+### collection
+- **group(array,key)** - group `array` by the `key`.`array` should like [{} ,{}].return {key:[]}
+- **groupOne(array,key)** - group `array` by the `key` , each group only has the on record. return {key:{}}
+- **col(array,key,keepNullValue)** - extract one column from array.if `keepNullValue` is true,the return will keep the null value.
+
+
 
 ###image
 heihei...
