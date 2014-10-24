@@ -1,6 +1,6 @@
 {
   "name": "myutils",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "my utils.",
   "main": "index.js",
   "scripts": {
@@ -28,9 +28,11 @@
   "devDependencies": {
     "co": "^3.1.0",
     "coveralls": "*",
+    "debug": "^2.1.0",
     "istanbul-harmony": "*",
     "mocha": "*",
     "mocha-lcov-reporter": "*",
+    "mysql": "^2.5.2",
     "should": "*"
   },
   "engines": {
