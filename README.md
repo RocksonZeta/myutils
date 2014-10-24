@@ -18,7 +18,7 @@ utils.version.compare("1.0" , "1.0.1").should.equal(-1);
 utils.net.ipToInt('192.168.0.1').should.equal(3232235521);
 ```
 
-API:
+##API:
 invoke convention: `module.$method` should use like this `yield module.$method` in [co](https://github.com/tj/co) or [koa](https://github.com/koajs/koa) envirment.
 
 ###hash
