@@ -25,6 +25,17 @@ describe('mysql' , function(){
 		debug(sql);
 		sql.should.equal("delete from `users` where `id`=1");
 	});
+	it('#psql' , function(){
+		var sql = mysql.psql(0,20);
+		debug(sql);
+		sql.should.equal(" limit 0,20");
+		sql = mysql.psql(0);
+		sql.should.equal(" limit 0");
+		sql = mysql.psql();
+		sql.should.equal("");
+		sql = mysql.psql(1, 0);
+		sql.should.equal(" limit 1");
+	});
 	it('#build' , function(){
 		var sql = mysql.build(':k1,:k2,:k1',{k1:'v1',k2:'v2'});
 		debug(sql);

@@ -60,6 +60,7 @@ implements with use system command
 - **postSql(table,object)** - generate post sql.
 - **putSql(table,key,value,keys)** - generate put sql.
 - **delSql(table,key,value,keys)** - generate delete sql.
+- **psql(startIndex,pageSize)** - page sql. `psql(0,20)->' limit 0,20'`;`psql(1)->' limit 1'` , `psql()->''` ,`psql(20 ,0) -> ''`;
 - **build(sql , params)** - replace `(':k1,:k2 ',{k1:"v1",k2:"v2"})` -> `'v1,v2'`.
 - **ukvs(opt ,[prefix])** - {k1:'v1',k2:'v2'} -> `k1`=v1,`k2`=v2 .
 - **ks(table,key,value,keys)** - keys. ['k1','k2'] -> k1,k2.
