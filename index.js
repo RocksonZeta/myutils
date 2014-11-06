@@ -10,3 +10,5 @@ cofy.object(exports.image);
 exports.net =require('./lib/net');
 exports.random =require('./lib/random');
 exports.mysql =require('./lib/mysql');
+exports.version =require('./lib/version');
+exports.object =require('./lib/object');

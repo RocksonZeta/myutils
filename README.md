@@ -40,6 +40,10 @@ invoke convention: `module.$method` should use like this `yield module.$method` 
 ###version
 - **compare(v1,v2)** - version compare. eg.compare("1.0" , "1.0.1") will be -1.v1 > v2 => 1; v1 == v2 => 0; v1 < v2 => -1
 
+###object
+- **parse(jsonStr)** - parse a json string to object with no exception throwing. if `jsonStr` is not a string type,it will return `jsonStr` directly;
+
+
 ###fsp
 implements with use system command 
 - **mkdirs(dir, cb)** - 
