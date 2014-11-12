@@ -1,5 +1,11 @@
 myutils
 =======
+[![Build Status](https://travis-ci.org/RocksonZeta/myutils.svg?branch=master)](https://travis-ci.org/RocksonZeta/myutils)
+[![Coverage Status](https://coveralls.io/repos/RocksonZeta/myutils/badge.png?branch=master)](https://coveralls.io/r/RocksonZeta/myutils?branch=master)
+[![NPM version](https://badge.fury.io/js/myutils.svg)](http://badge.fury.io/js/myutils)
+[![Dependency Status](https://david-dm.org/RocksonZeta/myutils.svg)](https://david-dm.org/RocksonZeta/myutils)
+
+[![NPM](https://nodei.co/npm/myutils.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/myutils/)
 
 Some useful utils.
 

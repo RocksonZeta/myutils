@@ -5,7 +5,7 @@ debug = require('debug')('mysql');
 require('should');
 
 describe('mysql' , function(){
-	it('.getSql' , function(){
+	it('#getSql' , function(){
 		var sql = mysql.getSql('users' , 'id',1,['name','age']);
 		debug(sql);
 		sql.should.equal("select `name`,`age` from `users` where `id`=1");
