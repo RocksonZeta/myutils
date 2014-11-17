@@ -12,4 +12,3 @@ exports.random =require('./lib/random');
 exports.mysql =require('./lib/mysql');
 exports.version =require('./lib/version');
 exports.object =require('./lib/object');
-exports.records =require('./lib/records');
